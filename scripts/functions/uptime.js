@@ -22,7 +22,6 @@ clients.connect(function(err) {
 
   let dbs = clients.db('website');
 
-  console.log(dbs);
 server.set('view engine', 'ejs');
 server.use(express.static(__dirname + '/../website'));
 server.get('/style', function(req,res) {
