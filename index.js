@@ -36,3 +36,4 @@ process.on('uncaughtException', (error) => {
 })
 
   console.log('Connected successfully to server');
+client.login(process.env.TOKEN);
