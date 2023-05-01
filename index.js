@@ -18,7 +18,6 @@ const keepAlive = require(`./scripts/functions/uptime.js`);
 fs.readdir(`./scripts/events/`, (err, files) => {
   if (err) return console.error(err);
   files.forEach(file => {
-    console.log(file);
     let eventFunction = require(`./scripts/events/${file}`);
     let eventName = file.split(".")[0];
     client.on(eventName, (...args) => {
