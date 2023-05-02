@@ -1,6 +1,8 @@
 const Discord = require('discord.js');
 exports.run = async (client, message, args, clients) => {
-  if(!args[0]) return message.reply('m!bugreport + bug');
+  if(!args[0]) {
+    message.reply('m!bugreport + bug');
+  }else {
   		let content = args[0]; 
   let embed = new Discord.MessageEmbed()
   .setTitle(`Bug report.`)
@@ -8,7 +10,8 @@ exports.run = async (client, message, args, clients) => {
   .setColor('#468bfa')
   .setThumbnail(message. user.displayAvatarURL());
   message.reply('Your suggestion had been send');
-client.channels.cache.get('1102940758182481930').send('New Bug report/Suggestion:',{ embeds: [embed] })
+client.channels.cache.get('1102940758182481930').send('New Bug report/Suggestion:',{ embeds: [embed] });
+  }
 }
 exports.slots = async() => {
 // 1 = public
