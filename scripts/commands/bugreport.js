@@ -6,7 +6,7 @@ exports.run = async (client, message, args, clients) => {
   }else {
   let embed = new Discord.MessageEmbed()
   .setTitle(`Bug report.`)
-  .setDescription(`By ${message.author.id} \n > ${args.join(' ')}`)
+  .setDescription(`By ${message.author.tag} \n > ${args.join(' ')}`)
   .setColor('#468bfa');
   message.reply('Your suggestion had been send');
 client.channels.cache.get('1102940758182481930').send('New Bug report/Suggestion:',{ embeds: [embed] });
