@@ -1,12 +1,12 @@
 const Discord = require('discord.js');
 exports.run = async (client, message, args, clients) => {
+  console.log(args[0]);
   if(!args[0]) {
     message.reply('m!bugreport + bug');
   }else {
-  		let content = args[0]; 
   let embed = new Discord.MessageEmbed()
   .setTitle(`Bug report.`)
-  .setDescription(`By ${message.author.id} \n > ${content}`)
+  .setDescription(`By ${message.author.id} \n > ${args.join(' ')}`)
   .setColor('#468bfa')
   .setThumbnail(message. user.displayAvatarURL());
   message.reply('Your suggestion had been send');
