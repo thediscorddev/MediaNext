@@ -9,7 +9,7 @@ exports.run = async (client, message, args, clients) => {
   .setDescription(`By ${message.author.tag} \n > ${args.join(' ')}`)
   .setColor('#468bfa');
   message.reply('Your suggestion had been send');
-client.channels.cache.get('1102940758182481930').send('New Bug report/Suggestion:',{ embeds: [embed] });
+client.channels.cache.get('1102940758182481930').send({ embeds: [embed] });
   }
 }
 exports.slots = async() => {
