@@ -7,7 +7,6 @@ exports.run = async(client, clients, prefix,member) => {
     .setColor(`RED`)
     .setDescription(`${member.user.tag} has left MPD 😭`)
     .setThumbnail(member.user.displayAvatarURL())
-     member.guild.channels.cache.get('699994813172416555').send({embeds:[embed]}); 
      let embeds = new Discord.MessageEmbed()
     .setTitle(`Member lefted`)
     .setColor(`RED`)
