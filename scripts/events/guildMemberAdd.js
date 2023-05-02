@@ -16,7 +16,6 @@ exports.run = async(client, clients, prefix,member) => {
     .addField(`is user a bot?`,member.user.bot.toString(),true)
     .setThumbnail(member.user.displayAvatarURL())
     .addField(`user account's age`,`<t:${parseInt(parseInt(member.user.createdTimestamp) / 1000)}:R>`)
-     member.guild.channels.cache.get('699994813172416555').send({embeds:[embed]});
     member.guild.channels.cache.get('795253328266919957').send({embeds:[embeds]});
   }
 }
