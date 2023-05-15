@@ -23,7 +23,7 @@ exports.run = async(client, message, args, clients) => {
     .setDescription(`Here's all the Items you can buy, sell, use and manage in the server.
 \`Normal Items\` (the button doesn't work at the moment, limit 12 item will be showed for now)`)
     
-    if(docs.length == 0) embed.addField(`ouch snap`,`we don't sell anything at this moment, but soon!, we will!`, true)
+    if(docs.length == 0) embed.addField(`ouch snap`,`we don't sell anything at this moment, but we will soon!`, true)
     docs.forEach(items => embed.addField(`> ${items.firstintro} - \`${items.displayname}\`\n Cost: ${items.mpd} $MPD, ${items.shard} shards, ${items.crystal} crystals, ${items.premium} premium coins, ${items.seasons} seasonal items `, ` \n > ${items.description}  \n > item id: \`${items.id}\``))
     
     message.channel.send({embeds:[embed],components:[row]})
@@ -41,5 +41,5 @@ exports.name = async() => {
   return "store";
 }
 exports.desc = async() => {
-  return "what does we offer today?";
+  return "what do we offer today? Who knows?";
 }
